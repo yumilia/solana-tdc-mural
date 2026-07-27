@@ -67,7 +67,8 @@ O build de produção é executado com `next build`. O fluxo on-chain deve ser t
 
 ## Demonstração e evidência on-chain
 
-- Aplicação publicada: [Solana TDC Mural](https://solana-tdc-mural.akimarcelo.chatgpt.site)
+- Aplicação publicada na Vercel: [Solana TDC Mural](https://solana-tdc-mural-czis-swart.vercel.app/)
+- Deploy alternativo: [OpenAI Sites](https://solana-tdc-mural.akimarcelo.chatgpt.site)
 - Transação de demonstração na Solana Devnet: [ver no Explorer](https://explorer.solana.com/tx/4V9DxbPivLJyisZhfVqyffyY4ut1J7jixp5xdT26HD8HZV834itEQkT88wE1XmWhqFXuEP5r7zmNGLmHbvtj4K6c?cluster=devnet)
 
 A transação usa o Memo Program e contém uma mensagem criada pelo app.
@@ -77,4 +78,4 @@ A transação usa o Memo Program e contém uma mensagem criada pelo app.
 1. Acesse [Vercel](https://vercel.com/new) e entre com a sua conta GitHub.
 2. Importe o repositório `yumilia/solana-tdc-mural`.
 3. Mantenha o framework como **Next.js** e clique em **Deploy**.
-4. Após publicar, adicione a URL da Vercel neste README e na submissão.
+4. Deploy publicado: [Solana TDC Mural na Vercel](https://solana-tdc-mural-czis-swart.vercel.app/).
