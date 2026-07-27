@@ -175,7 +175,7 @@ export default function Home() {
         new TransactionInstruction({
           keys: [],
           programId: MEMO_PROGRAM,
-          data: new TextEncoder().encode(`[Solana TDC Mural] ${cleanMessage}`),
+          data: Buffer.from(`[Solana TDC Mural] ${cleanMessage}`, "utf8"),
         }),
       );
 
