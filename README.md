@@ -21,7 +21,7 @@ rota de backend.
 - `@solana/web3.js`
 - Solana Memo Program
 - API route serverless
-- OpenAI Sites / Cloudflare Workers
+- Vercel / Next.js
 
 ## Executar localmente
 
@@ -63,9 +63,7 @@ Memo Program:
 npm test
 ```
 
-O teste de integração gera o bundle de produção e verifica a resposta HTML do
-worker. O fluxo on-chain deve ser testado com uma carteira configurada para a
-Solana devnet.
+O build de produção é executado com `next build`. O fluxo on-chain deve ser testado com uma carteira configurada para a Solana devnet.
 
 ## Demonstração e evidência on-chain
 
@@ -73,3 +71,10 @@ Solana devnet.
 - Transação de demonstração na Solana Devnet: [ver no Explorer](https://explorer.solana.com/tx/4V9DxbPivLJyisZhfVqyffyY4ut1J7jixp5xdT26HD8HZV834itEQkT88wE1XmWhqFXuEP5r7zmNGLmHbvtj4K6c?cluster=devnet)
 
 A transação usa o Memo Program e contém uma mensagem criada pelo app.
+
+## Deploy na Vercel
+
+1. Acesse [Vercel](https://vercel.com/new) e entre com a sua conta GitHub.
+2. Importe o repositório `yumilia/solana-tdc-mural`.
+3. Mantenha o framework como **Next.js** e clique em **Deploy**.
+4. Após publicar, adicione a URL da Vercel neste README e na submissão.
