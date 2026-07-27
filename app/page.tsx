@@ -101,6 +101,7 @@ export default function Home() {
   const [isPublishing, setIsPublishing] = useState(false);
   const [lastSignature, setLastSignature] = useState("");
   const [messages, setMessages] = useState<MuralMessage[]>(seedMessages);
+  const [showHow, setShowHow] = useState(false);
 
   const connection = useMemo(
     () => new Connection(RPC_ENDPOINT, "confirmed"),
@@ -238,9 +239,9 @@ export default function Home() {
           </span>
           <span>SOLANA TDC MURAL</span>
         </a>
-        <a className="how" href="#como-funciona">
+        <button className="how" type="button" onClick={() => setShowHow(true)}>
           <span>›</span> Como funciona
-        </a>
+        </button>
         <div className="top-actions">
           <span className="network-pill"><i /> DEVNET</span>
           <button className="wallet-button" onClick={connectWallet}>
@@ -372,6 +373,44 @@ export default function Home() {
           </a>
         </aside>
       </section>
+
+      {showHow && (
+        <div className="how-overlay" role="presentation" onClick={() => setShowHow(false)}>
+          <section
+            className="how-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="how-title"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button className="how-close" type="button" onClick={() => setShowHow(false)} aria-label="Fechar guia">
+              ×
+            </button>
+            <p className="eyebrow">GUIA RÁPIDO</p>
+            <h2 id="how-title">Como publicar na Solana Devnet</h2>
+            <div className="how-grid">
+              <article>
+                <b>01</b>
+                <h3>Conecte</h3>
+                <p>Abra a Phantom, selecione Solana Devnet e conecte a carteira.</p>
+              </article>
+              <article>
+                <b>02</b>
+                <h3>Escreva</h3>
+                <p>Digite uma mensagem de até 280 caracteres para a comunidade.</p>
+              </article>
+              <article>
+                <b>03</b>
+                <h3>Verifique</h3>
+                <p>Confirme a transação e abra o Explorer para ver seu Memo on-chain.</p>
+              </article>
+            </div>
+            <button className="publish-button how-cta" type="button" onClick={() => setShowHow(false)}>
+              Entendi, vamos publicar
+            </button>
+          </section>
+        </div>
+      )}
 
       <footer className="telemetry">
         <div><span className="telemetry-icon">▥</span><p>Rede operacional<b>Solana Devnet</b></p></div>
