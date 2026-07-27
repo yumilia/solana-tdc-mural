@@ -66,3 +66,10 @@ npm test
 O teste de integração gera o bundle de produção e verifica a resposta HTML do
 worker. O fluxo on-chain deve ser testado com uma carteira configurada para a
 Solana devnet.
+
+## Demonstração e evidência on-chain
+
+- Aplicação publicada: [Solana TDC Mural](https://solana-tdc-mural.akimarcelo.chatgpt.site)
+- Transação de demonstração na Solana Devnet: [ver no Explorer](https://explorer.solana.com/tx/4V9DxbPivLJyisZhfVqyffyY4ut1J7jixp5xdT26HD8HZV834itEQkT88wE1XmWhqFXuEP5r7zmNGLmHbvtj4K6c?cluster=devnet)
+
+A transação usa o Memo Program e contém uma mensagem criada pelo app.
